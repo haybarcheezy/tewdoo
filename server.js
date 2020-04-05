@@ -11,6 +11,7 @@ if (port == null || port == "") {
 
 app.use(express.static('public'))
 
+
 let connectionString = 'mongodb+srv://hayden:testpassword@publiccluster-7q8ru.azure.mongodb.net/test?retryWrites=true&w=majority'
 mongodb.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true }, function(err, client) {
     db = client.db()
