@@ -4,6 +4,11 @@ let mongodb = require('mongodb')
 let app = express()
 let db
 
+let port = process.env.PORT
+if (port == null || port == "") {
+    port = 3000
+}
+
 app.use(express.static('public'))
 
 let connectionString = 'mongodb+srv://hayden:testpassword@publiccluster-7q8ru.azure.mongodb.net/test?retryWrites=true&w=majority'
